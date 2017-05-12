@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{
+    padding-top: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="player"></div>
+
+  <script src="./audio.js"></script>
+  <script>
+    var audio = new Audio({
+      element:document.getElementById('player'),
+      autoplay: false,
+      menu:true,
+      path: "mp3",
+      music: [{
+        url: "想い出は远くの日々 - 天門.mp3",
+        title: "想い出は远くの日々",
+        author: "天門",
+        img:"http://p3.music.126.net/1gLX10_IGJIruMVMTvx3uA==/2450811418371976.jpg?param=130y130"
+      }, {
+        url: "On Your Mark.mp3",
+        title: "On Your Mark",
+        author: "CHAGE and ASKA",
+        img:"http://p1.music.126.net/UsbxKePGwCiRALQ5VJcsOg==/2335362697414055.jpg?param=130y130"
+      }]
+    });
+  </script>
+</body>
+
+</html>
