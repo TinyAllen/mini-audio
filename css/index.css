@@ -1,0 +1,73 @@
+  body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-family: 'Dosis-Medium';
+  }
+
+  .title::before {
+    content: "♬ ";
+    color: #DE463B;
+  }
+
+  .hljs-comment {
+    font-style: initial;
+  }
+
+  #player {
+    margin: 24px 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    line-height: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 6px 1.2em;
+    color: #fff;
+    position: relative;
+    font-size: 14px;
+    border-left: solid 1px #C02B21;
+    background: #DE463B;
+    -webkit-box-shadow: 0px 5px 0px 0px #C02B21;
+    box-shadow: 0px 5px 0px 0px #C02B21;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .btn:active {
+    top: 3px;
+    box-shadow: 0px 2px 0px 0px #C02B21;
+    -webkit-box-shadow: 0px 2px 0px 0px #C02B21;
+  }
+
+  .api {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    line-height: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 4px 1.2em;
+    border: 1px dotted #ccc;
+  }
+ .api:hover {
+    border: 1px solid #DE463B;
+  }
+  h2 {
+    font-size: 19px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .b600 {
+    font-weight: 600;
+  }

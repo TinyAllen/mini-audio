@@ -5,39 +5,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MiniAudio</title>
-  <style>
-  body{
-    padding-top: 30px;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-  </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="./css/atom-one-light.min.css" rel="stylesheet">
+  <script src="./js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 </head>
-<body>
-  <div id="player"></div>
 
-  <script src="./audio.js"></script>
+<body>
+  <h1 class="tc title mt24 mb20">mini-audio.js</h1>
+  <hr>
+  <div id="player"></div>
+  <h2>Install.</h2>
+  <a class="btn b600" href="./data/audio.zip">Download .zip</a>
+
+  <h2>Usage.</h2>
+  <div>1. Include the <span class="b">audio.js</span> file</div>
+  <pre>
+<code class="HTML"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+  <div>2. Initialise the audio player</div>
+  <pre>
+<code class="javascript">var audio = new Audio({
+  element: document.getElementById('player'),  //渲染的mod节点，默认是 #player
+  autoplay: true,                              //是否自动播放,默认false
+  menu: true,                                  //是否显示菜单
+  path: "",                                    //音频文件根目录，模式是root
+  music: [{
+    url: "",                                   //音乐的Url地址
+    title: "",                                 //音乐标题
+    author: "",                                //歌手
+    img: ""                                    //音乐图片
+  }]
+});
+</code></pre>
+  <div>3. Render the audio player</div>
+  <pre>
+<code class="javascript">audio.render();</code></pre>
+    <h2>Api.</h2>
+  <div class="fix mb24">
+  <a class="api b600 l trans">audio.render()</a>
+  <a class="api b600 l trans">audio.destroy()</a>
+  <a class="api b600 l trans">audio.play()</a>
+  <a class="api b600 l trans">audio.pause()</a>
+  <a class="api b600 l trans">audio.musicPlay(0)</a>
+  <a class="api b600 l trans">audio.musicPlay(1)</a>
+  <a class="api b600 l trans">audio.setMusic(index)</a>
+  <a class="api b600 l trans">audio.changeMode()</a>
+  <a class="api b600 l trans">audio.showMenu()</a>
+  </div>
+
+  <hr>
+  <p class="tc c8 pt16 pb16">
+    This site is ©copyright <a class="b" href="https://github.com/TinyAllen/">Allen</a> , 2017.
+  </p>
+  <script src="./js/audio.js"></script>
   <script>
     var audio = new Audio({
-      element:document.getElementById('player'),
-      autoplay: false,
-      menu:true,
-      path: "mp3",
+      element: document.getElementById('player'),
+      autoplay: true,
+      menu: true,
+      path: "data/mp3",
       music: [{
-        url: "想い出は远くの日々 - 天門.mp3",
-        title: "想い出は远くの日々",
-        author: "天門",
-        img:"http://p3.music.126.net/1gLX10_IGJIruMVMTvx3uA==/2450811418371976.jpg?param=130y130"
-      }, {
         url: "On Your Mark.mp3",
         title: "On Your Mark",
         author: "CHAGE and ASKA",
-        img:"http://p1.music.126.net/UsbxKePGwCiRALQ5VJcsOg==/2335362697414055.jpg?param=130y130"
+        img: "http://p1.music.126.net/UsbxKePGwCiRALQ5VJcsOg==/2335362697414055.jpg?param=130y130"
+      }, {
+        url: "想い出は远くの日々 - 天門.mp3",
+        title: "想い出は远くの日々",
+        author: "天門",
+        img: "http://p3.music.126.net/1gLX10_IGJIruMVMTvx3uA==/2450811418371976.jpg?param=130y130"
       }]
     });
     audio.render();
   </script>
+
 </body>
 
 </html>
